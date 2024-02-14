@@ -1,0 +1,24 @@
+black           # PEP8 formatter
+click           # CLI great interface
+datasets        # Hugging Face (datasets)
+fastapi         # API
+gradio          # ML GUI
+ipython         # great Python interpreter
+mlflow          # ML tracker
+nicegui         # cool Python GUI
+notebook        # all Jupyter notebook needs
+pandasgui       # DS reports
+pipreqs         # simple requirements
+pipreqsnb       # simple requirements for notebooks
+plotly          # interactive plots (with JS)
+pytest          # unit tests
+pytest-cov      # unit tests, cover a specific function
+scikit-learn    # ML
+seaborn         # plots
+session_info    # notebooks requirements
+setuptools      # package install & distribution
+streamlit       # ML GUI
+torch           # DL (pytorch)
+transformers    # Hugging Face (models, etc.)
+unidecode       # unicode formatter
+uvicorn         # ASGI web server
