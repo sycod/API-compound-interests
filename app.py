@@ -4,7 +4,7 @@ import plotly.express as px
 import streamlit as st
 import yaml
 
-with open('config.yaml', 'r') as f:
+with open("config.yaml", "r", encoding="utf-8") as f:
     ma_config = yaml.safe_load(f)
 
 rate = ma_config["rate"]
