@@ -2,10 +2,21 @@
 
 import plotly.express as px
 import streamlit as st
+import yaml
+
+with open('config.yaml', 'r') as f:
+    ma_config = yaml.safe_load(f)
+
+rate = ma_config["rate"]
+initial_k = ma_config["initial_k"]
+ann_savings = ma_config["ann_savings"]
 
 st.header("Un last test")
-st.subheader("Define a custom colorscale")
+st.subheader(f"My initial capital is {initial_k}")
+
+
 df = px.data.iris()
+
 fig = px.scatter(
     df,
     x="sepal_width",
