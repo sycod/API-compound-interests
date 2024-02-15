@@ -1,3 +1,6 @@
+alias:
+	echo "alias ll='ls -alF'" >> ~/.bashrc
+
 install:
 	pip install --upgrade pip &&\
 		pip install -r requirements.txt
