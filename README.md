@@ -17,3 +17,5 @@
 
 A very simple and interactive compound interests calculator.  
 Designed in Euro € with account taken of French taxation (PFL).
+
+👉 [picsou.streamlit.app](picsou.streamlit.app)
