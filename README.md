@@ -1,3 +1,5 @@
+👉 [picsou.streamlit.app](https://b-picsou.streamlit.app)
+
 1. open repo in a new **Code space** (or create a **dedicated VM** and clone repo)
 2. install useful **VSCode extensions**
     - Pylint
@@ -17,5 +19,3 @@
 
 A very simple and interactive compound interests calculator.  
 Designed in Euro € with account taken of French taxation (PFL).
-
-👉 [picsou.streamlit.app](https://picsou.streamlit.app)
