@@ -1,4 +1,4 @@
-👉 App deployed at [picsou.streamlit.app](https://b-picsou.streamlit.app)
+👉 App deployed at [picsou.streamlit.app](https://picsou.streamlit.app)
 
 # App overview
 
