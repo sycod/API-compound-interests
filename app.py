@@ -73,11 +73,8 @@ col1, col2, col3 = st.columns(3)
 
 # Capital setup
 with col1:
-    st.write(
-        "## Capital de départ : {:_} €".format(st.session_state.k_slider).replace(
-            "_", " "
-        )
-    )
+    st.write("## Capital initial")
+    st.write("### :orange[{:_} €]".format(st.session_state.k_slider).replace("_", " "))
     k_slider = st.slider(
         "",
         min_value=K["min"],
@@ -97,7 +94,8 @@ with col1:
 
 # Annual rate setup
 with col2:
-    st.write(f"## Taux d'intérêt annuel : {st.session_state.rate_slider :.0%}")
+    st.write("## Rentabilité annuelle")
+    st.write(f"### :orange[{st.session_state.rate_slider :.0%}]")
     rate_slider = st.slider(
         "",
         min_value=RATE["min"],
@@ -117,10 +115,9 @@ with col2:
 
 # Annual savings setup
 with col3:
+    st.write("## Épargne annuelle")
     st.write(
-        "## Épargne annuelle : {:_} €".format(st.session_state.ann_sav_slider).replace(
-            "_", " "
-        )
+        "### :orange[{:_} €]".format(st.session_state.ann_sav_slider).replace("_", " ")
     )
     ann_sav_slider = st.slider(
         "",
@@ -140,8 +137,7 @@ with col3:
     )
 
 # DEBUG
-"st.session_state object 👇", st.session_state
-
+"**------ DEBUG ------**  \nst.session_state object 👇", st.session_state
 
 # COMPUTATION
 # ...
