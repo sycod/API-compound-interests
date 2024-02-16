@@ -1,8 +1,9 @@
 """Streamlit simple app, calculating interests for the next years."""
 
-import plotly.express as px
-import streamlit as st
 import yaml
+import streamlit as st
+import pandas as pd
+import plotly.express as px
 
 
 # CONFIG
@@ -14,6 +15,7 @@ K = config["k"]
 RATE = config["rate"]
 ANN_SAVINGS = config["ann_savings"]
 DURATION = config["duration_yrs"]
+TAX = config["tax"]
 
 # SESSION STATE INITIALIZATION
 # Capital
@@ -66,7 +68,7 @@ st.set_page_config(
 )
 st.write("# ⚙️ L'appli arrive ! 🦄")
 st.write(
-    f"Intérêts annuels pour les {DURATION} prochaines années (brut et net, PFL inclus) et magie des intérêts composés."
+    f"Intérêts annuels pour les {DURATION} prochaines années (brut et net, taxes incluses) et magie des intérêts composés."
 )
 
 col1, col2, col3 = st.columns(3)

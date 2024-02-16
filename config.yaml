@@ -17,3 +17,4 @@ ann_savings:
   init: 1200
 
 duration_yrs: 40
+tax: 0.3
