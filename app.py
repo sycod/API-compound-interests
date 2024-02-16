@@ -73,7 +73,11 @@ col1, col2, col3 = st.columns(3)
 
 # Capital setup
 with col1:
-    st.write("## Capital de départ : {:_} €".format(st.session_state.k_slider).replace("_", " "))
+    st.write(
+        "## Capital de départ : {:_} €".format(st.session_state.k_slider).replace(
+            "_", " "
+        )
+    )
     k_slider = st.slider(
         "",
         min_value=K["min"],
