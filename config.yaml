@@ -14,7 +14,7 @@ ann_savings:
   min: 0
   max: 50000
   step: 100
-  init: 1200
+  init: 15000
 
 duration_yrs: 40
 tax: 0.3

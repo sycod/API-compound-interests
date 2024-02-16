@@ -2,8 +2,8 @@
 
 import yaml
 import streamlit as st
-import pandas as pd
-import plotly.express as px
+
+from gen_df import gen_df
 
 
 # CONFIG
@@ -138,25 +138,35 @@ with col3:
         on_change=ann_sav_from_input,
     )
 
-# DEBUG
-"**------ DEBUG ------**  \nst.session_state object 👇", st.session_state
 
-# COMPUTATION
-# ...
+# GENERATE DATAFRAME
+@st.cache_data
+def create_df(capital, rate, ann_savings):
+    """Generate dataframe from app inputs"""
+    df_raw = gen_df(capital, rate, ann_savings)
+    data = st.data_editor(
+        df_raw,
+        use_container_width=True,
+        hide_index=True,
+    )
+
+    return data
 
 
-# df = px.data.iris()
+# DISPLAY DATA
+with st.columns([0.15, 0.7, 0.15])[1]:
+    tab1, tab2, tab3 = st.tabs(["Tableau", "Capital", "Intérêts"])
+    # Dataframe
+    with tab1:
+        df = create_df(
+            st.session_state.k_slider,
+            st.session_state.rate_slider,
+            st.session_state.ann_sav_slider,
+        )
 
-# fig = px.scatter(
-#     df,
-#     x="sepal_width",
-#     y="sepal_length",
-#     color="sepal_length",
-#     color_continuous_scale="reds",
-# )
-
-# tab1, tab2 = st.tabs(["Streamlit theme (default)", "Plotly native theme"])
-# with tab1:
-#     st.plotly_chart(fig, theme="streamlit", use_container_width=True)
-# with tab2:
-#     st.plotly_chart(fig, theme=None, use_container_width=True)
+    # Plot: capital
+    with tab2:
+        st.line_chart(df, x="annee", y=["epargne", "capital"])
+    # Plot: interests
+    with tab3:
+        st.line_chart(df, x="annee", y=["epargne", "brut", "net", "mensuel_net"])
