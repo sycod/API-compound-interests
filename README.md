@@ -3,4 +3,4 @@
 # App overview
 
 A very simple and interactive compound interests calculator.  
-Designed for French taxation (PFU), see notebook for details.
+Designed for french taxation (PFU), see notebook for details.

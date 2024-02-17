@@ -1,7 +1,5 @@
 black           # PEP8 formatter
 notebook        # all Jupyter notebook needs
 pylint          # great linter
-pytest          # unit tests
-pytest-cov      # unit tests, cover a specific functionpytest-cov
 pyyaml          # YAML support
 streamlit       # cool Python GUI

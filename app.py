@@ -1,4 +1,4 @@
-"""Streamlit simple app, calculating interests for the next years."""
+"""Streamlit simple app, calculating interests for many years."""
 
 import yaml
 import streamlit as st
@@ -63,10 +63,10 @@ def ann_sav_from_input():
 # GUI
 st.set_page_config(
     page_title="Picsou",
-    page_icon="https://static.wikia.nocookie.net/bdpedia/images/3/3a/Scrooge_mcduck_good_guys_collab_by_phantom_akiko-d5o6mzu.png/revision/latest?cb=20130728102826&path-prefix=fr",
+    page_icon="favicon.ico",
     layout="wide",
 )
-st.write("# ⚙️ L'appli arrive ! 🦄")
+st.write("# 💰 Picsou calcule ses intérêts")
 st.write(
     f"Intérêts annuels pour les {DURATION} prochaines années (brut et net, taxes incluses) et magie des intérêts composés."
 )
@@ -156,6 +156,7 @@ def create_df(capital, rate, ann_savings):
 # DISPLAY DATA
 with st.columns([0.15, 0.7, 0.15])[1]:
     tab1, tab2, tab3 = st.tabs(["Tableau", "Capital", "Intérêts"])
+
     # Dataframe
     with tab1:
         df = create_df(
@@ -167,6 +168,7 @@ with st.columns([0.15, 0.7, 0.15])[1]:
     # Plot: capital
     with tab2:
         st.line_chart(df, x="annee", y=["epargne", "capital"])
+
     # Plot: interests
     with tab3:
         st.line_chart(df, x="annee", y=["epargne", "brut", "net", "mensuel_net"])
