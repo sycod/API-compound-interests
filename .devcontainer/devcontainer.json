@@ -15,7 +15,8 @@
         "ms-python.python",
         "ms-python.vscode-pylance",
         "ms-python.pylint",
-        "GitHub.copilot"
+        "GitHub.copilot",
+        "xelad0m.jupyter-toc"
       ]
     }
   },
