@@ -140,7 +140,6 @@ with col3:
 
 
 # GENERATE DATAFRAME
-@st.cache_data
 def create_df(capital, rate, ann_savings):
     """Generate dataframe from app inputs"""
     df_raw = gen_df(capital, rate, ann_savings)
